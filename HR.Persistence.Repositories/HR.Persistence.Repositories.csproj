@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HR.Persistence.Database\HR.Persistence.Database.csproj" />
+    <ProjectReference Include="..\HR.Persistence.Repositories.Interfaces\HR.Persistence.Repositories.Interfaces.csproj" />
+    <ProjectReference Include="..\Infrastructure.Redis\Infrastructure.Redis.csproj" />
+  </ItemGroup>
+
+</Project>
