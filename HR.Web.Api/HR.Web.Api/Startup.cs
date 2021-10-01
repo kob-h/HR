@@ -30,9 +30,6 @@ using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using StackExchange.Redis;
 using Infrastructure.Email;
-using Polly;
-using Polly.Extensions.Http;
-using Polly.Timeout;
 
 namespace HR.Web.Api
 {
@@ -48,23 +45,6 @@ namespace HR.Web.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddHttpClient<EmployeesController, EmployeesController>()
-                .SetHandlerLifetime(TimeSpan.FromMinutes(5))  //Set lifetime to five minutes
-                .AddPolicyHandler(
-                    HttpPolicyExtensions
-                        .HandleTransientHttpError()
-                        .OrResult(msg => msg.StatusCode == System.Net.HttpStatusCode.NotFound)
-                        .WaitAndRetryAsync(6, retryAttempt => TimeSpan.FromSeconds(2))
-                    );
-
-            //HttpPolicyExtensions
-            //    .HandleTransientHttpError()
-            //    .OrResult(msg => msg.StatusCode == System.Net.HttpStatusCode.NotFound)
-            //    .WaitAndRetryAsync(6, retryAttempt => TimeSpan.FromSeconds(2));
-
-
-
-
             services.AddInfrastructureLayerDependencies(Configuration);
 
             services.AddDbContextPool<HRDbContext>(

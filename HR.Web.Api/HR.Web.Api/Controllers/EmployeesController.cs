@@ -40,7 +40,6 @@ namespace HR.Web.Api.Controllers
         [Route("")]
         public async Task<IActionResult> GetAll([FromServices] IGetAllEmployees gerGetAllEmployees)
         {
-            return NotFound();
             var employees = await gerGetAllEmployees.Execute();
             return Ok(employees);
             
