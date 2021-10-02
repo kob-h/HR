@@ -49,6 +49,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HR.Common.Enumerations", "H
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HR.Persistence.Entities", "HR.Persistence.Entities\HR.Persistence.Entities.csproj", "{54FFE013-270D-4E54-A660-36343188BD07}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benchmarker", "Benchmarker\Benchmarker.csproj", "{0638377E-67E8-4DA0-8EDE-CC2CA19C0585}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -115,6 +117,10 @@ Global
 		{54FFE013-270D-4E54-A660-36343188BD07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54FFE013-270D-4E54-A660-36343188BD07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54FFE013-270D-4E54-A660-36343188BD07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0638377E-67E8-4DA0-8EDE-CC2CA19C0585}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0638377E-67E8-4DA0-8EDE-CC2CA19C0585}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0638377E-67E8-4DA0-8EDE-CC2CA19C0585}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0638377E-67E8-4DA0-8EDE-CC2CA19C0585}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -141,6 +147,7 @@ Global
 		{A1B61B8B-C7AE-4294-8652-DB445B0200B8} = {51404540-3B45-46C1-BEB9-2C1D85A0F9F0}
 		{66333C79-653A-42B1-B5C5-98572524859A} = {AB7A9AA4-2D64-439D-BF38-B0F78CBEF0AC}
 		{54FFE013-270D-4E54-A660-36343188BD07} = {A087AD56-D877-4468-9C10-280FF0C0DEBB}
+		{0638377E-67E8-4DA0-8EDE-CC2CA19C0585} = {65968129-455D-4E95-B6A9-C0E81EC71D9C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {857EA524-A810-46AB-8AB9-34FB8A432CF4}
