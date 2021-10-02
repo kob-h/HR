@@ -6,13 +6,14 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="BenchmarkDotNet" Version="0.13.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\HR.Application.BusinessService.Interfaces\HR.Application.BusinessService.Interfaces.csproj" />
     <ProjectReference Include="..\HR.Persistence.Database\HR.Persistence.Database.csproj" />
+    <ProjectReference Include="..\HR.Persistence.Entities\HR.Persistence.Entities.csproj" />
     <ProjectReference Include="..\HR.Persistence.Repositories.Interfaces\HR.Persistence.Repositories.Interfaces.csproj" />
-    <ProjectReference Include="..\HR.Web.Api\HR.Persistence.Entities\HR.Persistence.Entities.csproj" />
   </ItemGroup>
 
 </Project>
