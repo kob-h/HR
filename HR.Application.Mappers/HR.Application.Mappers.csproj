@@ -11,7 +11,6 @@
   <ItemGroup>
     <ProjectReference Include="..\HR.Application.Dtos\HR.Application.Dtos.csproj" />
     <ProjectReference Include="..\HR.Persistence.Entities\HR.Persistence.Entities.csproj" />
-    <ProjectReference Include="..\HR.Web.Api\HR.Persistence.Entities\HR.Persistence.Entities.csproj" />
   </ItemGroup>
 
 </Project>
