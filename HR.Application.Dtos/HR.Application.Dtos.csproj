@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HR.Web.Api\HR.Common.Enumerations\HR.Common.Enumerations.csproj" />
+    <ProjectReference Include="..\HR.Common.Enumerations\HR.Common.Enumerations.csproj" />
   </ItemGroup>
 
 </Project>

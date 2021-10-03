@@ -7,17 +7,21 @@ using AutoMapper;
 using HR.Application.BusinessService.Interfaces;
 using HR.Application.Dtos;
 using HR.Persistence.Database;
-using HR.Persistence.Entities;
 using HR.Persistence.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace HR.Application.BusinessService.Employees
 {
+
     public class GetAllEmployees : IGetAllEmployees
     {
         private readonly IMapper _mapper;
         private readonly IEmployeeRepository _employeeRepository;
 
+        public GetAllEmployees()
+        {
+            
+        }
         public GetAllEmployees(
             IMapper mapper,
             IEmployeeRepository employeeRepository)
@@ -25,6 +29,7 @@ namespace HR.Application.BusinessService.Employees
             _mapper = mapper;
             _employeeRepository = employeeRepository;
         }
+
         public async Task<List<EmployeeDto>> Execute()
         {
             var employeesEntity = await _employeeRepository
@@ -32,6 +37,15 @@ namespace HR.Application.BusinessService.Employees
                 .ToListAsync();
 
             return _mapper.Map<List<EmployeeDto>>(employeesEntity);
+        }
+
+
+        public async Task<List<EmployeeDto>> DoStuff()
+        {
+            return await System.Threading.Tasks.Task.FromResult(new List<EmployeeDto>()
+            {
+                new EmployeeDto() { }
+            });
         }
     }
 }
