@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
-using BenchmarkDotNet.Attributes;
 using HR.Application.BusinessService.Interfaces;
 using HR.Application.Dtos;
 using HR.Persistence.Database;
@@ -13,12 +12,16 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HR.Application.BusinessService.Employees
 {
-    [MemoryDiagnoser]
+
     public class GetAllEmployees : IGetAllEmployees
     {
         private readonly IMapper _mapper;
         private readonly IEmployeeRepository _employeeRepository;
 
+        public GetAllEmployees()
+        {
+            
+        }
         public GetAllEmployees(
             IMapper mapper,
             IEmployeeRepository employeeRepository)
@@ -26,7 +29,7 @@ namespace HR.Application.BusinessService.Employees
             _mapper = mapper;
             _employeeRepository = employeeRepository;
         }
-        [Benchmark]
+
         public async Task<List<EmployeeDto>> Execute()
         {
             var employeesEntity = await _employeeRepository
@@ -34,6 +37,15 @@ namespace HR.Application.BusinessService.Employees
                 .ToListAsync();
 
             return _mapper.Map<List<EmployeeDto>>(employeesEntity);
+        }
+
+
+        public async Task<List<EmployeeDto>> DoStuff()
+        {
+            return await System.Threading.Tasks.Task.FromResult(new List<EmployeeDto>()
+            {
+                new EmployeeDto() { }
+            });
         }
     }
 }
